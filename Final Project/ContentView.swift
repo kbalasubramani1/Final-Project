@@ -26,11 +26,27 @@ struct ContentView: View {
             input = Measurement(value: Double(inputValue) ?? 0, unit: UnitLength.kilometers)
         case "feet":
             input = Measurement(value: Double(inputValue) ?? 0, unit: UnitLength.feet)
-        case "meters":
+        case "miles":
             input = Measurement(value: Double(inputValue) ?? 0, unit: UnitLength.miles)
         default:
-            <#code#>
+            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitLength.meters)
         }
+        
+        switch outputUnits[outputUnitValue] {
+        case "meters":
+            output = String(describing: input.converted(to: UnitLength.meters))
+        case "kilometers":
+            output = String(describing: input.converted(to: UnitLength.kilometers))
+        case "feet":
+            output = String(describing: input.converted(to: UnitLength.feet))
+        case "miles":
+            output = String(describing: input.converted(to: UnitLength.miles))
+        default:
+            output = String(describing: input.converted(to: UnitLength.meters))
+        }
+        
+        return output
+        
     }
     
     var body: some View {
