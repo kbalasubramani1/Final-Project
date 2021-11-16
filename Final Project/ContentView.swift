@@ -21,7 +21,13 @@ struct ContentView: View {
         
         switch inputUnits[inputUnitValue] {
         case "meters":
-            input = Measurement(value: D, unit: UnitLength.meters)
+            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitLength.meters)
+        case "kilometers":
+            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitLength.kilometers)
+        case "feet":
+            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitLength.feet)
+        case "meters":
+            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitLength.miles)
         default:
             <#code#>
         }
