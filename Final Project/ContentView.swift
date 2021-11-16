@@ -56,6 +56,12 @@ struct ContentView: View {
                     TextField("Input Value",text:$inputValue)
                 }
                 
+                Section(header:Text("INPUT UNIT")) {
+                    Picker("Input Unit - ",selection:$inputUnitValue){
+                        ForEach(0..<inputUnits.count) {
+                            Text("\(inputUnits[$0])")
+                        }
+                }
                 Section(header:Text("Check Output value here")) {
                     Text(inputUnitAfterConversionToOutput)
                     
@@ -69,4 +75,5 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
 }
