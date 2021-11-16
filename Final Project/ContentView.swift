@@ -50,8 +50,13 @@ struct ContentView: View {
     }
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            Form {
+                Section(header:Text("Enter Input value here")) {
+                    
+                }
+            }
+        }
     }
 }
 
