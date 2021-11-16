@@ -53,6 +53,11 @@ struct ContentView: View {
         NavigationView {
             Form {
                 Section(header:Text("Enter Input value here")) {
+                    TextField("Input Value",text:$inputValue)
+                }
+                
+                Section(header:Text("Check Output value here")) {
+                    Text(inputUnitAfterConversionToOutput)
                     
                 }
             }
