@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5B0986274C031300F51357 /* Second View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B0985274C031300F51357 /* Second View.swift */; };
 		3FFD0BA9273C294E008953C6 /* Final_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD0BA8273C294E008953C6 /* Final_ProjectApp.swift */; };
 		3FFD0BAB273C294E008953C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD0BAA273C294E008953C6 /* ContentView.swift */; };
 		3FFD0BAD273C2954008953C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FFD0BAC273C2954008953C6 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F5B0985274C031300F51357 /* Second View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Second View.swift"; sourceTree = "<group>"; };
 		3FFD0BA5273C294E008953C6 /* Final Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Final Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FFD0BA8273C294E008953C6 /* Final_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final_ProjectApp.swift; sourceTree = "<group>"; };
 		3FFD0BAA273C294E008953C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				3FFD0BA8273C294E008953C6 /* Final_ProjectApp.swift */,
 				3FFD0BAA273C294E008953C6 /* ContentView.swift */,
+				3F5B0985274C031300F51357 /* Second View.swift */,
 				3FFD0BAC273C2954008953C6 /* Assets.xcassets */,
 				3FFD0BB1273C2954008953C6 /* Info.plist */,
 				3FFD0BAE273C2954008953C6 /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FFD0BAB273C294E008953C6 /* ContentView.swift in Sources */,
+				3F5B0986274C031300F51357 /* Second View.swift in Sources */,
 				3FFD0BA9273C294E008953C6 /* Final_ProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

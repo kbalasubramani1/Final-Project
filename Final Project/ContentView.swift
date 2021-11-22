@@ -15,10 +15,8 @@ struct ContentView: View {
     let inputUnits = ["meters","kilometers","feet","miles"]
     let outputUnits = ["meters","kilometers","feet","miles"]
     var inputUnitAfterConversionToOutput: String {
-        
         var output = ""
         var input = Measurement(value: 0, unit: UnitLength.meters)
-        
         switch inputUnits[inputUnitValue] {
         case "meters":
             input = Measurement(value: Double(inputValue) ?? 0, unit: UnitLength.meters)
@@ -31,7 +29,6 @@ struct ContentView: View {
         default:
             input = Measurement(value: Double(inputValue) ?? 0, unit: UnitLength.meters)
         }
-        
         switch outputUnits[outputUnitValue] {
         case "meters":
             output = String(describing: input.converted(to: UnitLength.meters))
@@ -44,11 +41,8 @@ struct ContentView: View {
         default:
             output = String(describing: input.converted(to: UnitLength.meters))
         }
-        
         return output
-        
     }
-    
     var body: some View {
         NavigationView {
             Form {
@@ -61,12 +55,20 @@ struct ContentView: View {
                         ForEach(0..<inputUnits.count) {
                             Text("\(inputUnits[$0])")
                         }
+                    }.pickerStyle(SegmentedPickerStyle())
+                }
+                Section(header:Text("OUTPUT UNIT")) {
+                    Picker("Output Unit - ",selection:$outputUnitValue){
+                        ForEach(0..<outputUnits.count) {
+                            Text("\(outputUnits[$0])")
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
                 }
                 Section(header:Text("Check Output value here")) {
                     Text(inputUnitAfterConversionToOutput)
-                    
                 }
             }
+            .navigationTitle("Unit Conversion")
         }
     }
 }
@@ -76,4 +78,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-}
+
